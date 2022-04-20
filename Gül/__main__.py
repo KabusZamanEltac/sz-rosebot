@@ -55,8 +55,8 @@ async def start_bot():
  _____________________________________________   
 |                                             |  
 |          Deployed Successfully              |  
-|         (C) 2021-2022 by @szteambots        | 
-|          Greetings from supun  :)           |
+| (C) 2021-2022 @ismiyev95 tərəfindən |
+| ismiyev95 den salamlar :) |
 |_____________________________________________|  
                                                                                                
     """)
@@ -94,13 +94,13 @@ home_keyboard_pm = InlineKeyboardMarkup(
         [
             InlineKeyboardButton(
                 text="📓 Documentation",
-                url=f"https://szsupunma.gitbook.io/rose-bot/",
+                url = f"https://KabusZamanEltac.gitbook.io/rose-bot/" ,
             )
         ],
         [
             InlineKeyboardButton(
                 text=" ➕ Add Me To Your Group ➕ ",
-                url=f"http://t.me/{BOT_USERNAME}?startgroup=new",
+                url = f"http://t.me/ { ASOrose_bot } ?startgroup=new" ,
             )
         ],
     ]
@@ -111,7 +111,7 @@ keyboard = InlineKeyboardMarkup(
         [
             InlineKeyboardButton(
                 text="📚 Commands & help",
-                url=f"t.me/{BOT_USERNAME}?start=help",
+                url = f"t.me/ { ASOrose_bot } ?start=help" ,
             )
         ]
     ]
@@ -126,7 +126,7 @@ async def start(client, message: Message, _):
         await add_served_user(message.from_user.id)
     if message.chat.type != "private":
         await message.reply(
-            _["main2"].format(BOT_NAME), reply_markup=keyboard)
+            _ [ "əsas2" ]. format ( ASOrose_bot ), cavab_işaretleme = klaviatura )
         return await add_served_chat(message.chat.id)
     if len(message.text.split()) > 1:
         name = (message.text.split(None, 1)[1]).lower()
@@ -150,7 +150,7 @@ async def start(client, message: Message, _):
             await message.reply("Run /connections to view or disconnect from groups!")
     else:
         await message.reply(
-            _["main1"].format(BOT_NAME),
+            _ [ "əsas1" ]. format ( ASOrose_bot ),
             reply_markup=home_keyboard_pm,
             disable_web_page_preview=True,
         )
@@ -169,7 +169,7 @@ async def help_command(client, message: Message, _):
                         [
                             InlineKeyboardButton(
                                 text=_["main3"],
-                                url=f"t.me/{BOT_USERNAME}?start=help_{name}",
+                                url = f"t.me/ { ASOrose_bot } ?start=help_ { ad } " ,
                             )
                         ],
                     ]
@@ -235,11 +235,10 @@ async def help_parser(name, keyboard=None):
 
 I'm a group management bot with some useful features.
 You can choose an option below, by clicking a button.
-If you have any bugs or questions on how to use me, 
-have a look at my [Docs](https://szsupunma.gitbook.io/rose-bot/), or head to @szteambots.
-
-**All commands can be used with the following: / **""",
-        keyboard,
+Məndən necə istifadə edəcəyinizlə bağlı hər hansı səhviniz və ya sualınız varsa,
+.have a look at my [Docs](https://szsupunma.gitbook.io/rose-bot/), or head to @szteambots.
+**Bütün əmrlər ilə istifadə edilə bilər: / **""" ,
+        klaviatura ,
     )
 
 
