@@ -14,7 +14,7 @@ keyboard = InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton(
-                text="English🇬🇧", callback_data="languages_en"
+                text="Azərbaycan Dili🇦🇿 callback_data="languages_az"
             ),
             InlineKeyboardButton(
                 text="සිංහල🇱🇰", callback_data="languages_si"
